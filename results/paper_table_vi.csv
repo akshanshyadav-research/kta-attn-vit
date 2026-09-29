@@ -1,0 +1,6 @@
+method,model,accuracy_percent,gops,savings_percent,provenance
+ViT-ToGo,ViT-B,78.21,11.14,36.59,external result cited in paper
+TAFP-ViT,DeiT-B,80.80,14.69,16.44,external result cited in paper
+ToMe,ViT-B,78.40,9.65,45.06,paper reports reimplementation; code absent
+ToFu,ViT-B,79.33,9.65,45.06,paper reports reimplementation; code absent
+KTA-Attn ViT,ViT-B,81.50,8.80,49.91,paper configuration KTA30 ATS12 blocks3-8

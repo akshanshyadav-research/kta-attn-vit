@@ -1,0 +1,4 @@
+model,depth,embedding_dim,mlp_dim,heads,reported_params_million,gflops,kta_overhead_g,fp32_accuracy,fx16_accuracy
+vit_tiny,12,192,768,3,9.7,1.255,0.018,64.89,64.58
+vit_small,12,384,1536,6,30.1,4.603,0.072,78.36,78.14
+vit_base,12,768,3072,12,86.0,17.571,0.289,83.54,83.35

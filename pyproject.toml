@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kta-attn-vit"
+version = "0.1.0"
+description = "Compact KTA-Attn ViT reproduction code and reported results"
+requires-python = ">=3.10"
+dependencies = ["torch==2.3.1", "torchvision==0.18.1", "timm==1.0.28", "numpy==1.23.5", "matplotlib==3.9.0", "pandas==2.2.2", "opencv-python==4.10.0.84", "qtorch==0.2.0", "ninja==1.11.1.1"]
+
+[project.optional-dependencies]
+notebook = ["jupyterlab", "ipykernel"]
+test = ["scipy"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
