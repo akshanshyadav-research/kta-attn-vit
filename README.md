@@ -1,6 +1,6 @@
 # KTA-Attn ViT — software reproduction
 
-Compact Python implementation and selected software results for **KTA-Attn ViT: A Hierarchical Token Pruning Framework for Accelerating ViTs**, Akshansh Yadav and Palash Das. Includes KTA/ATS inference, FX16 simulation, pruning ablations, attribution visualizations, translation analysis, two notebooks, and figures extracted from the supplied paper. No datasets, weights, archives, duplicate experiment notebooks, or hardware results are included.
+Compact Python implementation and selected software results for **KTA-Attn ViT: A Hierarchical Token Pruning Framework for Accelerating ViTs**, Akshansh Yadav and Palash Das. Includes KTA/ATS inference, FX16 simulation, pruning ablations, attribution visualizations, translation analysis, four notebooks, and figures extracted from the supplied paper. No datasets, weights, archives, duplicate experiment notebooks, or hardware results are included.
 
 **Status:** software runs and plots have been smoke-tested. Full ImageNet accuracy has **not** been independently reproduced. The original evaluation image list and exact pretrained checkpoint are not recorded in the available sources. See [reproduction details](REPRODUCIBILITY.md).
 
@@ -43,6 +43,10 @@ Remove `--max-images` for all available images. Use `--manifest /path/to/image_p
 Defaults reproduce the available notebooks' algorithm: FX16 (`FixedPoint(16,8)`), KTA before the encoder, and ATS after blocks **3–8, zero-based**. `--precision fp32` disables quantization. `--kta-drop 0 --ats-drop 0` selects the baseline. `--blocks` with no values disables ATS. Batch size is one because retained token counts depend on each image.
 
 `notebooks/02_evaluate.ipynb` exposes the same configuration. The shared Colab URL could not be retrieved, so these notebooks were built from local sources rather than the linked Colab.
+
+## Highlight result: 1.85-point drop / 49.91% savings
+
+Open [ViT-Base result and evaluation notebook](notebooks/03_vit_base_1_85_drop_49_91_savings.ipynb) for the historical **81.50% accuracy**, **83.35% baseline**, and paper-reported **8.80 GOPs / 49.91% savings**. It includes displayed results, comparison plots, and an optional full evaluation command. The [original experiment notebook](notebooks/04_original_vit_base_30_12.ipynb) contains the full historical implementation and its saved final output. Configuration: **30% KTA**, **12% ATS**, blocks **3–8**, FX16. Source hashes and the final log record are in `results/vit_base_30_12.json`.
 
 ## Paper experiments
 

@@ -1,0 +1,27 @@
+{
+  "model": "vit_base_patch16_224",
+  "kta_drop": 0.3,
+  "ats_drop": 0.12,
+  "ats_blocks": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "precision": "FX16 (16,8)",
+  "historical_accuracy_percent": 81.5,
+  "num_images": 10000,
+  "paper_baseline_accuracy_percent": 83.35,
+  "paper_accuracy_drop_percentage_points": 1.85,
+  "paper_gops": 8.8,
+  "paper_baseline_gops": 17.571,
+  "paper_savings_percent": 49.91,
+  "source_notebook": "i_100_drop_using_kendell/kendall-Copy1.ipynb",
+  "source_notebook_sha256": "d2904d8931064bfad9545df56a4d73027a9baa0d5e4f022e3d6f096f0e7cfa54",
+  "source_log": "i_100_drop_using_kendell/vit_base_similarity_dropblock[3, 4, 5, 6, 7, 8]_keep_rate0.70_attnprune0.12.txt",
+  "source_log_sha256": "39f456de27c614c8205f8a189186298f8c385bd198b4bb9bc74b67f0bb5d25b6",
+  "historical_final_log_line": "Epoch: Average percentage_patch_drop: 0.12, Accuracy: 81.5, processed_image: 10000, scan: 0",
+  "provenance": "Accuracy verified against historical local log; baseline and computational costs reported in paper Tables IV/VI. No new ImageNet run performed."
+}

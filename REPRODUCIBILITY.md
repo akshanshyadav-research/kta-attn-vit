@@ -41,3 +41,7 @@ The repository is self-contained after installing dependencies and supplying eva
 ## Verification scope
 
 Five unit tests passed, as did an offline pretrained-shaped ViT-Tiny FP32 forward, a small FX16 forward, and CLI smoke runs using a random local ViT-Tiny checkpoint with a synthetic image. Full ImageNet inference, numerical equality to the reported accuracies, a clean pip installation, and GPU execution were not performed. No synthetic outputs are included as scientific results.
+
+## Table VI historical notebook recovered
+
+The focused result notebook and original implementation now accompany `results/vit_base_30_12.json`. The source `i_100_drop_using_kendell/kendall-Copy1.ipynb` and matching 0.70-retention / 0.12-ATS log both end at 81.50% on 10,000 images. This independently locates the historical accuracy output; it does not resolve the missing image/checkpoint provenance or independently measure the paper-reported 49.91% savings. The original notebook is retained with portable configuration and class-folder extraction, and its saved output is explicitly historical.
